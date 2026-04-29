@@ -2,7 +2,7 @@
   "name": "git-commit-branch-finder",
   "displayName": "Git Commit Branch Finder",
   "description": "Find the Git branch containing a commit hash or commit message directly inside VS Code.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "agarjun007",
   "license": "MIT",
   "icon": "images/icon.png",
