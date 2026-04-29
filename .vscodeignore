@@ -1,0 +1,12 @@
+.gitignore
+.git
+.vscode
+.vscode-test
+out/test
+src/test
+node_modules
+*.vsix
+.DS_Store
+*.map
+tsconfig.json
+images/icon.png

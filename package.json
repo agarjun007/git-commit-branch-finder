@@ -1,0 +1,76 @@
+{
+  "name": "git-commit-branch-finder",
+  "displayName": "Git Commit Branch Finder",
+  "description": "Find the Git branch containing a commit hash or commit message directly inside VS Code.",
+  "version": "1.0.0",
+  "publisher": "agarjun007",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+  "SCM Providers",
+  "Other"
+],
+  "keywords": [
+    "git",
+    "branch",
+    "commit",
+    "git branch",
+    "commit finder",
+    "git tools",
+    "source control",
+    "git search",
+    "developer tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-github-username/git-commit-branch-finder"
+  },
+  "homepage": "https://github.com/your-github-username/git-commit-branch-finder",
+  "bugs": {
+    "url": "https://github.com/your-github-username/git-commit-branch-finder/issues"
+  },
+
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-commit-branch-finder.findBranch",
+        "title": "Find Branch for Commit",
+        "category": "Git"
+      },
+      {
+        "command": "git-commit-branch-finder.findBranchFromClipboard",
+        "title": "Find Branch from Clipboard",
+        "category": "Git"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "git-commit-branch-finder.findBranch",
+        "key": "ctrl+alt+b",
+        "mac": "cmd+alt+b",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish-extension": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.0"
+  }
+}
