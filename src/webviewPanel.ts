@@ -62,7 +62,7 @@ export class BranchFinderPanel {
     const successColor = '#4ade80';
     const errorColor = '#f87171';
     const borderColor = isDarkMode ? '#333333' : '#e5e7eb';
-
+    const originalBranch = result.branches.find(b => b.isOriginal);
     const statusHtml = result.found
       ? `
         <div class="status success">
@@ -346,15 +346,51 @@ export class BranchFinderPanel {
           ${
             result.found
               ? `
+            ${
+            originalBranch
+              ? `
+              <div style="margin-bottom: 24px;">
+                <div class="section-title">Original Branch</div>
+
+                <div class="branch-item ${
+                  originalBranch.name.startsWith('remotes/') ? 'remote' : 'local'
+                } original">
+
+                  <span class="branch-icon">
+                    ${originalBranch.name.startsWith('remotes/') ? '☁' : '⎇'}
+                  </span>
+
+                  <span class="branch-name">
+                    ${originalBranch.name.replace(/^remotes\//, '')}
+                  </span>
+
+                  <span class="original-badge">★ ORIGINAL</span>
+
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('${originalBranch.name}')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            `
+              : ''
+          }
             <div class="branches-container">
               ${
-                result.branches.filter(b => !b.name.startsWith('remotes/')).length > 0
+                result.branches.filter(b =>
+                !b.name.startsWith('remotes/') &&
+                !b.isOriginal
+              ).length > 0
                   ? `
                 <div>
                   <div class="section-title">Local Branches</div>
                   <div class="local-branches">
-                    ${result.branches
-                      .filter(b => !b.name.startsWith('remotes/'))
+                    ${result.branches.filter(b =>
+                    !b.name.startsWith('remotes/') &&
+                    !b.isOriginal
+                  )
                       .map(
                         branch =>
                           `

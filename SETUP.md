@@ -50,7 +50,7 @@ This creates an `out/` folder with compiled `.js` files.
 2. Press `F5` (or go to Run → Start Debugging)
 3. A new VS Code window opens with your extension loaded
 4. Test the commands:
-   - Press `Ctrl+Shift+G` (Windows/Linux) or `Cmd+Shift+G` (Mac)
+   - Press `Ctrl+ALT+B` (Windows/Linux) or `Cmd+Option+B` (Mac)
    - Enter a commit hash from any git repo open in that window
    - See the results!
 

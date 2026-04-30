@@ -26,8 +26,8 @@ A powerful VS Code extension that instantly reveals which branch a commit belong
 ## Usage
 
 ### Method 1: Keyboard Shortcut (Fastest)
-- **Windows/Linux**: `Ctrl+Shift+G`
-- **Mac**: `Cmd+Shift+G`
+- **Windows/Linux**: `Ctrl+ALT+B`
+- **Mac**: `Cmd+Option+B`
 - Paste a commit hash from clipboard and get results instantly
 
 ### Method 2: Command Palette
@@ -38,7 +38,7 @@ A powerful VS Code extension that instantly reveals which branch a commit belong
 
 ### Method 3: From Selection
 1. Select a commit hash in the editor
-2. Press `Ctrl+Shift+G` / `Cmd+Shift+G`
+2. Press `Ctrl+ALT+B` / `Cmd+Option+B`
 3. See branches instantly
 
 ### Method 4: Status Bar
@@ -80,7 +80,7 @@ Each branch is clickable to copy to clipboard.
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Shift+G` / `Cmd+Shift+G` | Find branch from selection or prompt |
+| `Ctrl+ALT+B` / `Cmd+Option+B` | Find branch from selection or prompt |
 | `Ctrl+Shift+P` → "Find Branch from Clipboard" | Search clipboard contents |
 
 ## Requirements
